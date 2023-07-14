@@ -1,0 +1,79 @@
+.form {
+  align-items: center;
+  display: flex;
+  gap: 1.5rem;
+  flex-direction: column;
+}
+
+.fieldset {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: flex-start;
+  width: 100%;
+}
+
+.srOnly {
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  -webkit-clip-path: inset(50%);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+.srOnly-focusable:active,
+.srOnly-focusable:focus {
+  clip: auto;
+  -webkit-clip-path: none;
+  clip-path: none;
+  height: auto;
+  margin: auto;
+  overflow: visible;
+  width: auto;
+  white-space: normal;
+}
+
+.inputGroup {
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.button {
+  background-color: var(--orange);
+  border: 0;
+  border-radius: 3rem;
+  color: var(--white);
+  font-family: var(--font-family-overpass);
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.15rem;
+  line-height: 0.9rem;
+  padding: 1rem 0;
+  text-transform: uppercase;
+  transition: 0.2s ease-in;
+  width: 100%;
+}
+
+.button:active,
+.button:focus,
+.button:hover {
+  background-color: var(--white);
+  color: var(--orange);
+  cursor: pointer;
+}
+
+@media screen and (min-width: 767px) {
+  .fieldset {
+    justify-content: space-between;
+  }
+}

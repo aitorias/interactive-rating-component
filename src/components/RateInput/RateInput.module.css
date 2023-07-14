@@ -1,0 +1,44 @@
+.input {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 100%;
+  visibility: hidden;
+  width: 100%;
+}
+
+.input:checked,
+.input:checked + label {
+  background-color: var(--light-grey);
+  color: var(--white);
+}
+
+.label {
+  align-items: center;
+  aspect-ratio: 1/1;
+  background-color: var(--dark-blue);
+  border-radius: 50%;
+  color: var(--light-grey);
+  cursor: pointer;
+  display: flex;
+  font-family: var(--font-family-overpass);
+  font-size: 0.8rem;
+  font-weight: 700;
+  justify-content: center;
+  line-height: normal;
+  transition: 0.2s ease-in;
+  width: 43px;
+}
+
+.label:active,
+.label:focus,
+.label:hover {
+  background-color: var(--orange);
+  color: var(--white);
+}
+
+@media screen and (min-width: 767px) {
+  .label {
+    font-size: 1rem;
+    width: 50px;
+  }
+}
